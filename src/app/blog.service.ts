@@ -7,7 +7,7 @@ import { Blog } from './blog';
 })
 export class BlogService {
 
-  // list of blogs
+  
   
   private NextId:number;
 
