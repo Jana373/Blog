@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddblogComponent } from './addblog/addblog.component';
-import { BlogComponent } from './blog/blog.component';
-import { BlogitemComponent } from './blogitem/blogitem.component';
-import { EditblogComponent } from './editblog/editblog.component';
-import { FullblogComponent } from './fullblog/fullblog.component';
-import { HomepageComponent } from './homepage/homepage.component';
+import { AddblogComponent } from './components/pages/addblog/addblog.component';
+import { BlogComponent } from './components/pages/blog/blog.component';
+import { BlogitemComponent } from './components/items/blogitem/blogitem.component';
+import { EditblogComponent } from './components/pages/editblog/editblog.component';
+import { FullblogComponent } from './components/pages/fullblog/fullblog.component';
+import { HomepageComponent } from './components/pages/homepage/homepage.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},

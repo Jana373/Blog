@@ -1,7 +1,7 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 
-import { Blog } from './blog';
+import { Blog } from '../classes/blog';
 @Injectable({
   providedIn: 'root'
 })

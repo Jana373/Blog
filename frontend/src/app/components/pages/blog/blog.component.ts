@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogService } from 'src/app/blog.service';
+import { BlogService } from 'src/app/services/blog.service';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',

@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AddblogComponent } from './components/pages/addblog/addblog.component';
-import { BlogService } from './blog.service';
+import { BlogService } from './services/blog.service';
 import { BlogComponent } from './components/pages/blog/blog.component';
 import { BlogitemComponent } from './components/items/blogitem/blogitem.component';
 import { EditblogComponent } from './components/pages/editblog/editblog.component';
