@@ -34,7 +34,7 @@ router.get('/get_blogs/:id', (req, res, next) => {
 // inserting a blog
 router.post('/post_blog', (req, res, next) => {
     let new_blog = new blog({
-        // _id: req.body._id,
+        _id: req.body._id,
         title: req.body.title,
         body: req.body.body,
         category: req.body.category,

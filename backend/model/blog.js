@@ -1,9 +1,8 @@
 const mongoose = require('mongoose')
 
 const BlogItemSchema = mongoose.Schema({
-    
     _id: {
-        type: Number,
+        type: String,
         required: true
     },
     title: {
