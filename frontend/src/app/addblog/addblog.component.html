@@ -1,0 +1,33 @@
+
+<body class ="body">
+        <!-- we are using 2 way data binding here every change in the template will cause the corresponding variable to update-->
+        <p>Title:</p>
+        <input type="text" [(ngModel)]="blogTitle">
+        <br>
+        <br>
+        <label for="textarea">What's on your mind : </label><br><br>
+        <textarea id="textarea" cols="30" rows="10" placeholder="write here..." [(ngModel)]="blogBody"></textarea>
+        <br>
+        <br>
+        <p>Category:</p>
+        <input type="text" [(ngModel)]="blogCategory">
+        <br>
+        <br>
+
+        <p>Image Url:</p>
+        <input type="text" [(ngModel)]="blogImage">
+        <br>
+        <br>
+
+
+        <p>Author Name:</p>
+        <input type="text" [(ngModel)]="authName">
+        <br>
+        <br>
+
+        <p>Author Title:</p>
+        <input type="text" [(ngModel)]="authTitle" >
+        <br>
+        <br>
+        <button (click) = "addBlog()">Post</button>
+</body>
