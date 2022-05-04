@@ -36,7 +36,7 @@ export class FullblogComponent implements OnInit {
         this.blogTitle = this.blog["title"];
         this.blogBody = this.blog["body"];
         this.blogCategory = this.blog["category"];
-        this.postDate = new Date();
+        this.postDate = this.blog["post_date"];
         this.blogImage = this.blog["image_url"];  
         this.authName = this.blog["author"];
         this.authTitle = this.blog["author_title"];
