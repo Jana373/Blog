@@ -44,7 +44,7 @@ export class EditblogComponent implements OnInit {
         this.blogBody = this.blog["body"];
         this.blogCategory = this.blog["category"];
         this.postDate = new Date();
-        this.blogImage = this.blog["image_url"];
+        this.blogImage = this.blog["image_url"];  
         this.authName = this.blog["author"];
         this.authTitle = this.blog["author_title"];
       })

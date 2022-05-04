@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Blog } from 'src/app/classes/blog';
 import { BlogService } from 'src/app/services/blog.service';
 import { ActivatedRoute } from '@angular/router'
+import { DbBlogService } from 'src/app/services/db-blog.service';
 
 @Component({
   selector: 'app-fullblog',
@@ -22,19 +23,27 @@ export class FullblogComponent implements OnInit {
   authName: string;
   authTitle: string;
 
-  constructor(private route: ActivatedRoute, private blogservice: BlogService) { }
+  constructor(private route: ActivatedRoute, private blogservice: BlogService, public DbBlogservice: DbBlogService) { }
 
   ngOnInit(): void {
 
-    this.id = this.route.snapshot.paramMap.get('id');
-    this.b = this.blogservice.getBlogbyID(Number(this.id));
-    this.blogTitle = this.b["title"];
-    this.blogBody = this.b["body"];
-    this.blogCategory = this.b["category"];
-    this.postDate = new Date();
-    this.blogImage = this.b["imageUrl"];
-    this.authName = this.b["author"];
-    this.authTitle = this.b["authorTitle"];
+    this.route.params.subscribe(params => {
+      this.id = params['id'];
+      this.DbBlogservice.getBlogbyID(this.id).subscribe(res => {
+        // res is an array containing the object blog of id id 
+        this.blog = res[0];
+        console.log(this.blog);
+        this.blogTitle = this.blog["title"];
+        this.blogBody = this.blog["body"];
+        this.blogCategory = this.blog["category"];
+        this.postDate = new Date();
+        this.blogImage = this.blog["image_url"];  
+        this.authName = this.blog["author"];
+        this.authTitle = this.blog["author_title"];
+      })
+    })
+
+
   }
 
 }
