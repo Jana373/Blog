@@ -12,12 +12,12 @@ const route = require('./route/routes');
 mongoose.connect('mongodb://localhost:27017/webBlog');
 
 // on connection
-mongoose.connection.on('connected',()=>{
+mongoose.connection.on('connected', () => {
     console.log('mongoDB connected at port 27017')
 })
 
 // on connection error
-mongoose.connection.on('error',()=>{
+mongoose.connection.on('error', () => {
     console.log(err);
 })
 const PORT = 3000;
@@ -33,12 +33,12 @@ app.use(bodyparser.json());
 // route ending with/ will be directed to route file 
 app.use('/', route)
 
-app.listen(PORT ,()=>{
+app.listen(PORT, () => {
     console.log('Server has been started at port: ' + PORT);
 })
 
-app.get('/', (req, res)=>{
-    res.send("jana aaa")
+app.get('/', (req, res) => {
+    res.send("test")
 })
 
 

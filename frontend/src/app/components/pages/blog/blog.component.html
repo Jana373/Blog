@@ -1,12 +1,11 @@
+<div *ngIf="this.blogs.length > 0"></div>
+<div class="grid-container">
+    <div *ngFor="let blog of this.blogs">
+        <app-blogitem [blog]="blog"></app-blogitem>
+    </div>
+</div>
 
-<div *ngIf="blogservice.getBlogs().length > 0"></div>
-   <div class="grid-container">
-        <div *ngFor="let blog of blogservice.getBlogs()">
-            <app-blogitem [blog]="blog"></app-blogitem>
-        </div>
-   </div>
-    
 
-<div *ngIf="blogservice.getBlogs().length == 0">
-    <div id ="message">No Blogs yet! Try adding some</div>
+<div *ngIf="this.blogs.length <= 0">
+    <div id="message">No Blogs yet! Try adding some</div>
 </div>

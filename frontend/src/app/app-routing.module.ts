@@ -8,12 +8,12 @@ import { FullblogComponent } from './components/pages/fullblog/fullblog.componen
 import { HomepageComponent } from './components/pages/homepage/homepage.component';
 
 const routes: Routes = [
-  {path: '', component: HomepageComponent},
-  {path: 'add', component: AddblogComponent},
-  {path: 'blogs', component: BlogComponent},
-  {path: 'edit/:id', component: EditblogComponent},
-  {path: 'blog/:id', component: FullblogComponent},
- 
+  { path: '', component: HomepageComponent },
+  { path: 'add', component: AddblogComponent },
+  { path: 'blogs', component: BlogComponent },
+  { path: 'edit/:id', component: EditblogComponent },
+  { path: 'blog/:id', component: FullblogComponent },
+
 ];
 
 @NgModule({

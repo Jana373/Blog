@@ -1,29 +1,29 @@
 <div>
-    
+
 
     <div>
-        <img [src]="blog.imageUrl" (click)="showBlog()">
+        <img [src]="blog.image_url" (click)="showBlog()">
     </div>
     <!--using pipes to format the date -->
-    <div >
-        {{blog.category}} | {{blog.postdate | date}}
-        
+    <div>
+        {{blog.category}} | {{blog.post_date | date}}
+
     </div>
-    <div id = "title">
+    <div id="title">
         {{blog.title}}
     </div>
-        
+
     <div>
         {{blog.author}}
-       
+
     </div>
-    <div id = "authtitle">
-        {{blog.authorTitle}}
+    <div id="authtitle">
+        {{blog.author_title}}
     </div>
     <div>
-      
+
         <button (click)="removeBlog()">Remove</button> <button (click)="editBlog()">Edit</button>
     </div>
-    
-   
+
+
 </div>

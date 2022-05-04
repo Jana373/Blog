@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AddblogComponent } from './components/pages/addblog/addblog.component';
 import { BlogService } from './services/blog.service';
+import { DbBlogService } from './services/db-blog.service';
 import { BlogComponent } from './components/pages/blog/blog.component';
 import { BlogitemComponent } from './components/items/blogitem/blogitem.component';
 import { EditblogComponent } from './components/pages/editblog/editblog.component';
@@ -23,16 +24,18 @@ import { HomepageComponent } from './components/pages/homepage/homepage.componen
     EditblogComponent,
     FullblogComponent,
     HomepageComponent,
-    
-    
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [
     BlogService,
+    DbBlogService,
   ],
   bootstrap: [AppComponent]
 })

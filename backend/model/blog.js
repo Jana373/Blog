@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
 const BlogItemSchema = mongoose.Schema({
-    _id: {
-        type: String,
-        required: true
-    },
+    /* _id: {
+         type: String,
+         required: true
+     },*/
     title: {
         type: String,
         required: true
@@ -22,7 +22,7 @@ const BlogItemSchema = mongoose.Schema({
         required: true
     },
     post_date: {
-        type: String,
+        type: Date,
         required: true
     },
     author: {

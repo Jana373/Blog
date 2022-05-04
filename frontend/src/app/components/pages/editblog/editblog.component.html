@@ -1,11 +1,11 @@
-<body class ="body">
+<body class="body">
         <h1>You can edit this blog here</h1>
         <h2>{{blogTitle}}</h2>
         <br>
         <br>
         <!-- we are using 2 way data binding here every change in the template will cause the corresponding variable to update and vice versa-->
         <p>Title:</p>
-                <input type="text" [(ngModel)]="blogTitle">
+        <input type="text" [(ngModel)]="blogTitle">
         <br>
         <br>
         <label for="textarea">WRITE content HERE : </label><br><br>
@@ -13,22 +13,22 @@
         <br>
         <br>
         <p>Category:</p>
-                <input type="text" [(ngModel)]="blogCategory">
+        <input type="text" [(ngModel)]="blogCategory">
         <br>
         <br>
 
         <p>ImageUrl:</p>
-                <input type="text" [(ngModel)]="blogImage">
+        <input type="text" [(ngModel)]="blogImage">
         <br>
         <br>
 
         <p>Author Name:</p>
-                <input type="text" [(ngModel)]="authName">
+        <input type="text" [(ngModel)]="authName">
         <br>
         <br>
 
         <p>Author Title:</p>
-                <input type="text" [(ngModel)]="authTitle" >
+        <input type="text" [(ngModel)]="authTitle">
 
         <br>
         <button (click)="updateBlog()"> Update</button>
